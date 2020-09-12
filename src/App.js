@@ -3,6 +3,9 @@ import './App.css';
 import Header from "./Header";
 import Home from  "./Home" ;
 
+
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -36,10 +39,7 @@ function App() {
             <Header/>
             <Home />
 
-            <h1>
-              This is the home page 
-            </h1>
-        
+           
           </Route>
 
         </Switch>
