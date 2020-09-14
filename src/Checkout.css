@@ -1,0 +1,15 @@
+.checkout__title {
+    margin : 20px 
+}
+
+.checkout__banner{
+    max-width: 100%;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.checkout__banner__ad{
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+}
