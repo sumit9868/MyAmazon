@@ -3,7 +3,7 @@ import './App.css';
 import Header from "./Header";
 import Home from  "./Home" ;
 import Checkout from './Checkout';
-
+import Login from './Login';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,10 +27,7 @@ function App() {
           </Route>
 
           <Route path="/login">
-            <Header/>
-            <h1>
-              This is the login page
-            </h1>
+            <Login/>
           </Route>
 
           <Route path="/">

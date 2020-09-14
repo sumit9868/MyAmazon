@@ -1,7 +1,9 @@
 import React from 'react'
 import './Checkout.css'
-import { useStateValue } from './StateProvider'
-import CheckoutProduct from './CheckoutProduct'
+import { useStateValue } from "./StateProvider"
+import CheckoutProduct from "./CheckoutProduct"
+import CurrencyFormat from "react-currency-format"
+import Subtotal from './Subtotal'
 
 function Checkout() {
 
@@ -41,7 +43,6 @@ function Checkout() {
 
                         {/* <hr style="width:100%; text-align:left; margin-left:0;"></hr> */}
 
-
                         {basket.map(item => (
                             <CheckoutProduct
                                 id={item.id}
@@ -53,8 +54,16 @@ function Checkout() {
                             />
                         ))}
                     </div>
-                )
-            }
+                )}
+
+            {basket.length > 0 && (
+
+                <div className="checkout__right">
+                    <h1>Subtotal</h1>
+                    {/**/}
+                    <Subtotal />
+                </div>
+            )}
 
         </div>
     );
