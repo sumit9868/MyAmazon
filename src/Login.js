@@ -1,8 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css'
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from './firebase';
 
 function Login() {
+
+    const history = useHistory();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const login = (event) => {
+        //prevents refresh
+        event.preventDefault();
+
+        auth.signInWithEmailAndPassword(email, password)
+            .then((auth) => {
+                //logged in , go to personal home
+                history.push("/");
+            })
+
+            .catch((e) => alert(e.message));
+    }
+
+    const register = (event) => {
+        //prevents refresh
+        event.preventDefault();
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                //user created
+                history.push("/");
+            })
+
+            .catch((e) => alert(e.message));
+
+    }
+
     return (
         <div className="login">
 
@@ -13,22 +46,30 @@ function Login() {
                 />
             </Link>
 
-            <div className="login__container">   
+            <div className="login__container">
                 <h1>Sign in</h1>
                 <form>
                     <h5>E-mail</h5>
-                    <input  placeholder="Enter your E-mail" type="email" />
+                    <input value={email} onChange={event => setEmail(event.target.value)} placeholder="Enter your E-mail" type="email" />
                     <h5>Password</h5>
-                    <input  placeholder="Enter your Password" type="password" />
-                    
-                    <button type="submit" className="signin__button">Sign In</button>
+                    <input value={password} onChange={event => setPassword(event.target.value)} placeholder="Enter your Password" type="password" />
+
+                    <button onClick={login} type="submit" className="signin__button">Sign In</button>
                 </form>
 
-                <p> 
+                <p>
                     By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
                 </p>
 
-                <button className="signup__button">Create your Amazon Account</button>
+
+                <div className="seperator" >
+                    <hr></hr>
+                    <div className="seperator__div" >
+                        <h5 className="seperator__title" >New to Amazon?</h5>
+                    </div>
+                </div>
+                <button onClick={register} className="signup__button">Create your Amazon Account</button>
+
             </div>
 
             {/* <h1>Login Page</h1> */}
