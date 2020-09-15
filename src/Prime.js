@@ -11,38 +11,9 @@ function Prime() {
             bootstrap sliding rows for movies
              */}
 
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            
-            <iframe width="400" height="400"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-
+            <h1>
+                This will be the prime-video section.
+            </h1>
 
         </div>
     )
