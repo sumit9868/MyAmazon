@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from './StateProvider';
-import { auth } from 'firebase';
+import { auth } from './firebase';
 
 function Header() {
 
@@ -39,7 +39,7 @@ function Header() {
             {/* 1st link  of SIGNIN*/}
             <Link to={!user && "/login"} className="header__link highlight">
                 <div onClick={login} className="header__option">
-                    <span className="header__optionLine1">Hello </span>
+                    <span className="header__optionLine1">Hello {user?.email} </span>
                     <span className="header__optionLine2">{user ? 'Sign Out' : 'Sign In'}</span>
                 </div>
             </Link>
@@ -73,9 +73,7 @@ function Header() {
 
                     {/* Number of items in the basket  */}
                     <span className="header__optionLine2 header__BasketCount">{basket.length}</span>
-
                 </div>
-
             </Link>
 
         </div>

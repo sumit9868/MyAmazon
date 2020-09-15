@@ -31,9 +31,7 @@ function Login() {
                 //user created
                 history.push("/");
             })
-
             .catch((e) => alert(e.message));
-
     }
 
     return (
