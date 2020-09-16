@@ -13,7 +13,7 @@ function Home() {
 
       {/* Product id, title, price, rating, image */}
       <div className="home__row">
-          
+
         <Product
           id="1"
           title="Harry Potter and the Deadly Mystery - J.K. Rowling"
@@ -21,6 +21,7 @@ function Home() {
           rating={5}
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTDvR2FOBqHh-uXwIIiX7NhK-l3U19l82VsJA&usqp=CAU"
         />
+        
         <Product
           id="2"
           title="Samsung Galaxy Note10 Lite (Aura Glow, 6GB RAM, 128GB Storage)"
