@@ -2,7 +2,7 @@
   background-color: white;
 }
 
-.payment__container {
+.payment__container > h1 {
   text-align: center;
   padding: 10px;
   font-weight: 400;
@@ -30,6 +30,8 @@
 .payment__details {
   flex: 0.8;
 }
+
+
 
 .payment__details > form {
   max-width: 400px;

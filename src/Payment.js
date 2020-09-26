@@ -41,6 +41,7 @@ function Payment() {
     e.preventDefault();
     setProcessing(true);
 
+    // eslint-disable-next-line
     const payload = await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
@@ -79,7 +80,9 @@ function Payment() {
 
   return (
     <div className="payment">
+
       <div className="payment__container">
+        
         <h1>
           Checkout (<Link to="/checkout">{basket?.length} Items</Link>)
         </h1>
@@ -100,12 +103,12 @@ function Payment() {
 
         {/* Payment section - review items  */}
         <div className="payment__section">
-          
+
           <div className="payment__title">
             <h3>Review Items and Delivery</h3>
           </div>
 
-          <div className="payment__item">
+          <div className="payment__items">
             {basket.map((item) => (
               <CheckoutProduct
                 id={item.id}
@@ -116,12 +119,12 @@ function Payment() {
               />
             ))}
           </div>
-
         </div>
 
         {/* Payment section - payment method */}
 
         <div className="payment__section">
+
           <div className="payment__title">
             <h3>Payment Method</h3>
           </div>
@@ -153,6 +156,7 @@ function Payment() {
             </form>
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 .checkoutProduct {
     display: flex;
-    margin-bottom: 10px;
-    margin : 20px 20px;
+    margin-bottom: 20px;
+    margin-top : 20px;
     background-color: #f1f1f1;
     border: 1px solid #b1adad;
     border-radius: 3px;
@@ -27,6 +27,7 @@
     display: flex;
     margin-bottom: 5px;
 }
+
 .checkoutProduct__info > button {
     padding: 3px;
     cursor: pointer;

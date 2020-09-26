@@ -11,7 +11,6 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
-import axios from "./axios.js";
 import Orders from "./Orders.js";
 
 const promise = loadStripe(
@@ -19,6 +18,7 @@ const promise = loadStripe(
 );
 
 function App() {
+  // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
 
   //useeffect, code depeending on condition
@@ -47,9 +47,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        
         <Switch>
-
           <Route path="/orders">
             <Header />
             <Orders />
@@ -57,7 +55,7 @@ function App() {
 
           <Route path="/checkout">
             <Header />
-            <Checkout />;
+            <Checkout />
           </Route>
 
           <Route path="/login">

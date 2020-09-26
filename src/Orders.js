@@ -5,6 +5,7 @@ import { useStateValue } from "./StateProvider";
 import { db } from "./firebase.js";
 
 function Orders() {
+  // eslint-disable-next-line
   const [{ basket, user }, dispatch] = useStateValue();
   const [orders, setOrders] = useState([]);
 
