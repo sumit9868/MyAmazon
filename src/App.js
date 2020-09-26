@@ -47,7 +47,9 @@ function App() {
   return (
     <Router>
       <div className="app">
+        
         <Switch>
+
           <Route path="/orders">
             <Header />
             <Orders />
@@ -55,7 +57,7 @@ function App() {
 
           <Route path="/checkout">
             <Header />
-            <Checkout />
+            <Checkout />;
           </Route>
 
           <Route path="/login">

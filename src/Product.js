@@ -10,7 +10,7 @@ function Product({ id, title, image, price, rating }) {
 
         //add item to basket
         dispatch({
-            type:'ADD TO CART',
+            type:'ADD_TO_CART',
             item : {
                 //key : value
                 id:id,
