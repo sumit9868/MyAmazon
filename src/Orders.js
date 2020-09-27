@@ -30,7 +30,7 @@ function Orders() {
 
   return (
     <div className="orders">
-      <h1>Your orders</h1>
+      <h1>Your Orders</h1>
       <div className="orders__order">
         {orders?.map((order) => (
           <Order order={order} />

@@ -2,7 +2,7 @@ import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
-function CheckoutProduct({ id, title, image, price, rating , hideButton }) {
+function CheckoutProduct({ id, title, image, price, rating , showButton }) {
   // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
   const removefromCart = () => {
@@ -34,7 +34,8 @@ function CheckoutProduct({ id, title, image, price, rating , hideButton }) {
             ))}
         </div>
         
-        {!hideButton && (
+        {/* showButton is checking for null , not for true or false */}
+        { showButton && (
           <button
             onClick={removefromCart}
             className="removeCart__button highlight"
